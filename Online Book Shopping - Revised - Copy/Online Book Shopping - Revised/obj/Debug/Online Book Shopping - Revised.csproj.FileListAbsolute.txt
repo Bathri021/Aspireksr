@@ -1,0 +1,12 @@
+C:\Users\ELCOT\Desktop\Online Book Shopping - Revised\Online Book Shopping - Revised\bin\Debug\Online Book Shopping - Revised.exe.config
+C:\Users\ELCOT\Desktop\Online Book Shopping - Revised\Online Book Shopping - Revised\bin\Debug\Online Book Shopping - Revised.exe
+C:\Users\ELCOT\Desktop\Online Book Shopping - Revised\Online Book Shopping - Revised\bin\Debug\Online Book Shopping - Revised.pdb
+C:\Users\ELCOT\Desktop\Online Book Shopping - Revised\Online Book Shopping - Revised\obj\Debug\Online Book Shopping - Revised.csprojResolveAssemblyReference.cache
+C:\Users\ELCOT\Desktop\Online Book Shopping - Revised\Online Book Shopping - Revised\obj\Debug\Online Book Shopping - Revised.exe
+C:\Users\ELCOT\Desktop\Online Book Shopping - Revised\Online Book Shopping - Revised\obj\Debug\Online Book Shopping - Revised.pdb
+C:\Users\ELCOT\Desktop\Online Book Shopping - Revised - Copy\Online Book Shopping - Revised\bin\Debug\Online Book Shopping - Revised.exe.config
+C:\Users\ELCOT\Desktop\Online Book Shopping - Revised - Copy\Online Book Shopping - Revised\obj\Debug\Online Book Shopping - Revised.exe
+C:\Users\ELCOT\Desktop\Online Book Shopping - Revised - Copy\Online Book Shopping - Revised\obj\Debug\Online Book Shopping - Revised.pdb
+C:\Users\ELCOT\Desktop\Online Book Shopping - Revised - Copy\Online Book Shopping - Revised\bin\Debug\Online Book Shopping - Revised.exe
+C:\Users\ELCOT\Desktop\Online Book Shopping - Revised - Copy\Online Book Shopping - Revised\bin\Debug\Online Book Shopping - Revised.pdb
+C:\Users\ELCOT\Desktop\Online Book Shopping - Revised - Copy\Online Book Shopping - Revised\obj\Debug\Online Book Shopping - Revised.csprojResolveAssemblyReference.cache
