@@ -22,7 +22,14 @@ namespace Online_Book_Shopping___Revised
                 Password = userRegister.getPassword()
         };
             CustomerRepositary custRepos = new CustomerRepositary();
-            custRepos.addCustomer(customer);
+            if (custRepos.addCustomer(customer) == 1)
+            {
+                Console.WriteLine("\nCustomer Added...");
+            }
+            else
+            {
+                Console.WriteLine("\nCustomer Does Not Added...");
+            }
         }
 
         private void viewBooks()

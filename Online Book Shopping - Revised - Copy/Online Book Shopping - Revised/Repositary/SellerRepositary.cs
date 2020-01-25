@@ -12,9 +12,9 @@ namespace Online_Book_Shopping___Revised
         static string connection = ConfigurationManager.ConnectionStrings["connection"].ConnectionString;  // Get Connection String From App.Config
 
         SqlConnection dbConnection = new SqlConnection(connection);
-        public void addSeller(Seller seller)
+        public int addSeller(Seller seller)
         {
-
+            int rows;
             try
             {
 
@@ -35,21 +35,16 @@ namespace Online_Book_Shopping___Revised
                     SqlDataAdapter sqldataAdapter = new SqlDataAdapter();
 
                     sqldataAdapter.InsertCommand = insertcommand;
-                    int rows = insertcommand.ExecuteNonQuery();   // Execute the Insert Query
-                    if (rows >= 1)
-                    {
-                        Console.WriteLine("\nSeller Added...");
-                    }
-                    else
-                    {
-                        Console.WriteLine("\nSeller Does not Added...");
-                    }
+                    rows = insertcommand.ExecuteNonQuery();   // Execute the Insert Query
+                   
                 }
                 addSellerIntoList();
+                return rows;
             }
             catch (Exception e)
             {
                 Console.WriteLine("Exception Occur : " + e.Message);
+                return 0;
             }
 
             finally

@@ -10,7 +10,15 @@ namespace Online_Book_Shopping___Revised
 {
     class Admin
     {
+        protected internal string Name;
+        protected internal string UserName;
+        protected internal string MailId;
+        protected internal double PhoneNumber;
+        protected internal string Password;
+        protected internal string Role;
+        protected internal int AdminID;
 
+        public Dictionary<int, Admin> AdminList = new Dictionary<int, Admin>();
         protected internal void viewCustomers()
         {
             CustomerManagement customerManager = new CustomerManagement();

@@ -12,9 +12,9 @@ namespace Online_Book_Shopping___Revised
 
         SqlConnection dbConnection = new SqlConnection(connection);
         
-        public void addCustomer(Customer customer)
+        public int addCustomer(Customer customer)
         {
-
+            int rows;
             try
             {
                 dbConnection.Open();
@@ -35,21 +35,16 @@ namespace Online_Book_Shopping___Revised
                   SqlDataAdapter sqldataAdapter = new SqlDataAdapter();
 
                   sqldataAdapter.InsertCommand = insertcommand;
-                  int rows = insertcommand.ExecuteNonQuery();  // Execute the Insert Query
-                    if (rows >= 1)
-                    {
-                        Console.WriteLine("\nCustomer Added...");
-                    }
-                    else
-                    {
-                        Console.WriteLine("\nCustomer Does not Added...");
-                    }
+                  rows = insertcommand.ExecuteNonQuery();  // Execute the Insert Query
+                  
                 }
                 addCustomerIntoList();
+                return rows;
             }
             catch (Exception e)
             {
                 Console.WriteLine("Exception Occur : "+e.Message);
+                return 0;
             }
 
             finally
@@ -59,7 +54,7 @@ namespace Online_Book_Shopping___Revised
              
          }
 
-        public void addCustomerIntoList()
+        public void addCustomerIntoList()  // Add the customer Details into the list
         {
             string sqlQuery = "Select * From Customer";
             using (SqlCommand selectCommand = new SqlCommand(sqlQuery, dbConnection))
@@ -69,6 +64,7 @@ namespace Online_Book_Shopping___Revised
                 DataSet customerDataset = new DataSet();
                 adapter.Fill(customerDataset, "Customer");
                 DataTable customerDataTable = customerDataset.Tables["Customer"];
+                // Iterate through the Data table to fetch the Row 
                 foreach (DataRow row in customerDataTable.Rows)
                 {
                    Customer customer = new Customer
@@ -80,7 +76,7 @@ namespace Online_Book_Shopping___Revised
                         Role = row[4].ToString(),
                         CustomerID = int.Parse(row[5].ToString())
                     };
-                    customerList.Add(customer.CustomerID, customer);
+                    customerList.Add(customer.CustomerID, customer);  // Add into the List
                 }
             };
 

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Online_Book_Shopping___Revised.Text_Source;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,7 +14,7 @@ namespace Online_Book_Shopping___Revised.Validation
         {
             string title;
             getTitle:
-            Console.WriteLine("Enter Book Name : ");
+            Console.WriteLine(Text.booktitle);
             try
             {
                 title = Console.ReadLine();
@@ -21,7 +22,7 @@ namespace Online_Book_Shopping___Revised.Validation
                 Match match = regex.Match(title);
                 if (!match.Success)
                 {
-                    Console.WriteLine("Invalid Title...!!!");
+                    Console.WriteLine(Text.wrongBooktitle);
                     goto getTitle;
                 }
             }
@@ -39,13 +40,13 @@ namespace Online_Book_Shopping___Revised.Validation
             getBookAuthor:
             try
             {
-                Console.WriteLine("Enter Author Name : ");
+                Console.WriteLine(Text.authorName);
                 author = Console.ReadLine();
                 Regex regex = new Regex(@"^[A-Z][a-zA-Z]*$");
                 Match match = regex.Match(author);
                 if (!match.Success)
                 {
-                    Console.WriteLine("Invalid Author Name...!!!");
+                    Console.WriteLine(Text.wrongAuthorName);
                     goto getBookAuthor;
                 }
             }
@@ -63,13 +64,13 @@ namespace Online_Book_Shopping___Revised.Validation
             getBookGenere:
             try
             {
-                Console.WriteLine("Enter Book Genere : ");
+                Console.WriteLine(Text.Genere);
                 genere = Console.ReadLine();
                 Regex regex = new Regex(@"^[A-Z][a-zA-Z]*$");
                 Match match = regex.Match(genere);
                 if (!match.Success)
                 {
-                    Console.WriteLine("Invalid Genere...!!!");
+                    Console.WriteLine(Text.wrongGenere);
                     goto getBookGenere;
                 }
             }
@@ -88,13 +89,13 @@ namespace Online_Book_Shopping___Revised.Validation
             getBookPrice:
             try
             {
-                Console.WriteLine("Enter Book Price");
+                Console.WriteLine(Text.Price);
                 tempPrice = Console.ReadLine();
                 Regex regex = new Regex(@"\d");
                 Match match = regex.Match(tempPrice);
                 if (!match.Success)
                 {
-                    Console.WriteLine("Please Enter Valid Price...!!!");
+                    Console.WriteLine(Text.wrongPrice);
                     goto getBookPrice;
                 }
                int price = int.Parse(tempPrice);
@@ -114,13 +115,13 @@ namespace Online_Book_Shopping___Revised.Validation
             getNoOfPages:
             try
             {
-                Console.WriteLine("Enter No Of Pages : ");
+                Console.WriteLine(Text.NoOfPages);
                 tempNoOfPages = Console.ReadLine();
                 Regex regex = new Regex(@"\d");
                 Match match = regex.Match(tempNoOfPages);
                 if (!match.Success)
                 {
-                    Console.WriteLine("Please Enter Valid Pages...!!!");
+                    Console.WriteLine(Text.wrongNoOfPages);
                     goto getNoOfPages;
                 }
                 noOfPages = int.Parse(tempNoOfPages);

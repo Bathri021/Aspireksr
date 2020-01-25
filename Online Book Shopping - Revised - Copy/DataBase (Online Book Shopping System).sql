@@ -61,7 +61,7 @@ Raiserror ('No User is found with this User name and Password',16,1)
 End
 
 Declare @role varchar(20)
-Exec spCheckUserNameandPassword 'Bathri','1234',@_Role=@role out
+Exec spCheckUserNameandPassword ,'Bathri','1234',@_Role=@role out
 Print @role
 
 

@@ -50,12 +50,15 @@
     <Compile Include="Entities\Customer Entity\Customer.cs" />
     <Compile Include="Entities\Customer Entity\CustomerManagement.cs" />
     <Compile Include="Entities\Seller Entity\SellerManagement.cs" />
+    <Compile Include="LogIn Manager\LogInManager.cs" />
     <Compile Include="Portal.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Entities\Seller Entity\Seller.cs" />
+    <Compile Include="Repositary\AdminRepositary.cs" />
     <Compile Include="Repositary\BookRepositary.cs" />
     <Compile Include="Repositary\SellerRepositary.cs" />
     <Compile Include="Entities\User.cs" />
+    <Compile Include="Text Source\Text.cs" />
     <Compile Include="Validation\BookValidation.cs" />
     <Compile Include="Validation\RegistrationValidation.cs" />
     <Compile Include="Repositary\CustomerRepositary.cs" />

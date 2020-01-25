@@ -36,37 +36,16 @@ namespace Online_Book_Shopping___Revised.Entities
 
             BookRepositary bookRepos = new BookRepositary();
 
-            bookRepos.addBook(book);
-        }
-
-        public void listBooks()
-        {
-            string connection = ConfigurationManager.ConnectionStrings["connection"].ConnectionString;   // Getting the Connection String 
-            SqlConnection dbConnection = new SqlConnection(connection);
-
-            try
+            if (bookRepos.addBook(book) >= 1)
             {
-                dbConnection.Open();
-                string command = "SELECT * FROM Book";   // Declare The Query
-                SqlCommand selectcommand = new SqlCommand(command, dbConnection);
-                SqlDataReader reader = selectcommand.ExecuteReader();
-
-                Console.WriteLine("\n***Book Details***\n");
-                //FetchDatails From Table
-                while (reader.Read())
-                {
-                    Console.WriteLine("BookID : {0}\nTitle : {1}\nAuthor : {2}\nGenere : {3}\nPrice : {4}\nNo Of Pages : {5}", reader[0], reader[2], reader[3], reader[4], reader[5], reader[6]);
-                    Console.WriteLine("\n");
-                }
+                Console.WriteLine("\nBook Added...");
             }
-            catch (Exception e)
+            else
             {
-                Console.WriteLine("Exception Occur : " + e.Message);
-            }
-            finally
-            {
-                dbConnection.Close();
+                Console.WriteLine("\nBook Does not Added...");
             }
         }
+
+       
     }
 }

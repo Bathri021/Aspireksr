@@ -9,6 +9,11 @@ namespace Online_Book_Shopping___Revised.Entities.Book_Entity
 {
     class BookManagement
     {
+        static void initializeBooksList()
+        {
+           BookRepositary obj = new BookRepositary();
+            obj.addbBookIntoList();
+        }
         public void viewBooks()
         {
             BookRepositary obj = new BookRepositary();

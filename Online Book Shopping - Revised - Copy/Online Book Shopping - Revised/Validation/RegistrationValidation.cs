@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Online_Book_Shopping___Revised.Text_Source;
 
 namespace Online_Book_Shopping___Revised
 {
@@ -15,7 +16,7 @@ namespace Online_Book_Shopping___Revised
         {
             string name;
             getName:
-            Console.WriteLine("Enter Your Name : ");
+            Console.WriteLine(Text.Name);
             try
             {
                 name = Console.ReadLine();
@@ -23,7 +24,7 @@ namespace Online_Book_Shopping___Revised
                 Match match = regex.Match(name);
                 if (!match.Success)
                 {
-                    Console.WriteLine("Invalid Name...!!!");
+                    Console.WriteLine(Text.wrongName);
                     goto getName;
                 }
                 return name;
@@ -49,15 +50,15 @@ namespace Online_Book_Shopping___Revised
         {
             string userName;
             getUserName:
-            Console.WriteLine("Enter Your User Name : ");
+            Console.WriteLine(Text.UserName);
             try
             {
                 userName = Console.ReadLine();
-                Regex regex = new Regex(@"^[A-Z][a-zA-Z]*$");
+                Regex regex = new Regex(@"^[a-zA-Z][a-zA-Z]*$");
                 Match match = regex.Match(userName);
                 if (!match.Success)
                 {
-                    Console.WriteLine("Invalid Name...!!!");
+                    Console.WriteLine(Text.wrongUserName);
                     goto getUserName;
                 }
                 return userName;
@@ -83,7 +84,7 @@ namespace Online_Book_Shopping___Revised
         {
             string mailid;
             getMailId:
-            Console.WriteLine("Enter Mail ID : ");
+            Console.WriteLine(Text.MailID);
             try
             {
                 mailid = Console.ReadLine();
@@ -91,7 +92,7 @@ namespace Online_Book_Shopping___Revised
                 Match match = regex.Match(mailid);
                 if (!match.Success)
                 {
-                    Console.WriteLine("Enter Valid Mail ID...!!!");
+                    Console.WriteLine(Text.wrongMailID);
                     goto getMailId;
                 }
                 return mailid;
@@ -117,7 +118,7 @@ namespace Online_Book_Shopping___Revised
         {
             string tempPhoneNo;
             getPhoneNumber:
-            Console.WriteLine("Enter your Phone Number");
+            Console.WriteLine(Text.PhoneNumber);
             try
             {
                 tempPhoneNo = Console.ReadLine();
@@ -125,7 +126,7 @@ namespace Online_Book_Shopping___Revised
                 Match match = regex.Match(tempPhoneNo);
                 if (!match.Success)
                 {
-                    Console.WriteLine("Please Enter Valid Phone Number...!!!");
+                    Console.WriteLine(Text.wrongPhoneNumber);
                     goto getPhoneNumber;
                 }
                 double phoneNo = double.Parse(tempPhoneNo);
@@ -152,15 +153,15 @@ namespace Online_Book_Shopping___Revised
         {
             string password;
             getPassword:
-            Console.WriteLine("Enter Your Password : ");
+            Console.WriteLine(Text.Password);
             try
             {
                 password = Console.ReadLine();
-                Console.WriteLine("Again Enter Your Password to Confirm");
+                Console.WriteLine(Text_Source.Text.tempPassword);
                 string tempPassword = Console.ReadLine();
                 if (password!=tempPassword)
                 {
-                    Console.WriteLine("Passwod is not Matching...");
+                    Console.WriteLine(Text.wrongPassword);
                     goto getPassword;
                 }
                 return password;

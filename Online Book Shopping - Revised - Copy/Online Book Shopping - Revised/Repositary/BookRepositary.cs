@@ -16,8 +16,9 @@ namespace Online_Book_Shopping___Revised.Repositary
 
         SqlConnection dbConnection = new SqlConnection(connection);
 
-        public void addBook(Book book)
+        public int addBook(Book book)
         {
+            int rows;
             try
             {
                 dbConnection.Open();
@@ -38,22 +39,16 @@ namespace Online_Book_Shopping___Revised.Repositary
                     SqlDataAdapter sqldataAdapter = new SqlDataAdapter();
 
                     sqldataAdapter.InsertCommand = insertcommand;
-                    int rows = insertcommand.ExecuteNonQuery();  // Execute the Insert Query
-                    if (rows >= 1)
-                    {
-                        Console.WriteLine("\nBook Added...");
-                    }
-                    else
-                    {
-                        Console.WriteLine("\nBook Does not Added...");
-                    }
+                    rows = insertcommand.ExecuteNonQuery();  // Execute the Insert Query
+                   
                 }
                 addbBookIntoList();
-
+                return rows;
             }
             catch (Exception e)
             {
                 Console.WriteLine("Exception Occur : " + e.Message);
+                return 0;
             }
 
             finally

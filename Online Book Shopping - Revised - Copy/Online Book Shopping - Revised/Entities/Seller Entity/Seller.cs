@@ -33,7 +33,15 @@ namespace Online_Book_Shopping___Revised
                 Password = userRegister.getPassword()
             };
             SellerRepositary sellerRepos = new SellerRepositary();
-            sellerRepos.addSeller(seller);
+            
+            if (sellerRepos.addSeller(seller) >= 1)
+            {
+                Console.WriteLine("\nSeller Added...");
+            }
+            else
+            {
+                Console.WriteLine("\nSeller Does not Added...");
+            }
         }
 
         private void addBook()

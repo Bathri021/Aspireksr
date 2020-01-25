@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Online_Book_Shopping___Revised.Admin" Collapsed="true">
+    <Position X="3.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQAAABAAEAAAQBQAAIAgAAACAQAAAgAAAAA=</HashCode>
+      <FileName>Entities\Admin.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Online_Book_Shopping___Revised.Customer" Collapsed="true">
+    <Position X="0.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAABAAAAAAAAAAAAAgEAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Entities\Customer Entity\Customer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Online_Book_Shopping___Revised.Seller" Collapsed="true">
+    <Position X="4" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAAAAAAAICAAAAAEQAAAAEAAIAABAAAAAAAAAAA=</HashCode>
+      <FileName>Entities\Seller Entity\Seller.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Online_Book_Shopping___Revised.User" Collapsed="true">
+    <Position X="3" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAEAABAAQAAAAgAAASAQAAAAAAAAA=</HashCode>
+      <FileName>Entities\User.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Online_Book_Shopping___Revised.Portal" Collapsed="true">
+    <Position X="9.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Portal.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Online_Book_Shopping___Revised.CustomerRepositary" Collapsed="true">
+    <Position X="0.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAAAAAAAAAAAABAAAAAAAAAAAgAAAAAAAAABA=</HashCode>
+      <FileName>Repositary\CustomerRepositary.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Online_Book_Shopping___Revised.SellerRepositary" Collapsed="true">
+    <Position X="3" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAgAEAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Repositary\SellerRepositary.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Online_Book_Shopping___Revised.RegistrationValidation" Collapsed="true">
+    <Position X="11.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAABAAAAAAAAIAAEAAAAAAAAAAAAEAAAAAAA=</HashCode>
+      <FileName>Validation\RegistrationValidation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Online_Book_Shopping___Revised.Entities.Book" Collapsed="true">
+    <Position X="0.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAAQQAgAEAAgAAAAAIAAACAAAAAAgAAAAAAAAA=</HashCode>
+      <FileName>Entities\Book Entity\Book.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Online_Book_Shopping___Revised.Entities.Book_Entity.BookManagement" Collapsed="true">
+    <Position X="7.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAABAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAA=</HashCode>
+      <FileName>Entities\Book Entity\BookManagement.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Online_Book_Shopping___Revised.Entities.Customer_Entity.CustomerManagement" Collapsed="true">
+    <Position X="11.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAA=</HashCode>
+      <FileName>Entities\Customer Entity\CustomerManagement.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Online_Book_Shopping___Revised.Entities.Seller_Entity.SellerManagement" Collapsed="true">
+    <Position X="5.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAA=</HashCode>
+      <FileName>Entities\Seller Entity\SellerManagement.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Online_Book_Shopping___Revised.LogIn_Manager.LogInManager" Collapsed="true">
+    <Position X="7.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAA=</HashCode>
+      <FileName>LogIn Manager\LogInManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Online_Book_Shopping___Revised.Repositary.AdminRepositary" Collapsed="true">
+    <Position X="3.5" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAE=</HashCode>
+      <FileName>Repositary\AdminRepositary.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Online_Book_Shopping___Revised.Repositary.BookRepositary" Collapsed="true">
+    <Position X="0.5" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAQAAAAAAIAAAAAABAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Repositary\BookRepositary.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Online_Book_Shopping___Revised.Text_Source.Text" Collapsed="true">
+    <Position X="7.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ADAAAgAAAQAgAAACAEBASA5ABAggAUACAQAEAQAAAAA=</HashCode>
+      <FileName>Text Source\Text.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Online_Book_Shopping___Revised.Validation.BookValidation" Collapsed="true">
+    <Position X="9.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAAQAAAgAAACAAAAAAAQAAAAAAAAAAAA=</HashCode>
+      <FileName>Validation\BookValidation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

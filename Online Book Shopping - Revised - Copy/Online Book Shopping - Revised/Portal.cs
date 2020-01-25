@@ -1,12 +1,14 @@
-﻿
-using Online_Book_Shopping___Revised.Entities;
-using Online_Book_Shopping___Revised.Entities.Book_Entity;
-/**
+﻿/**
 * Class : Online Book Shopping System [Project]
 * Version :Visual Studio 2015
-* Date : 21-01-2020
+* Date : 25-01-2020
 * Author : N.Bathri
 **/
+
+using Online_Book_Shopping___Revised.Entities;
+using Online_Book_Shopping___Revised.Entities.Book_Entity;
+using Online_Book_Shopping___Revised.LogIn_Manager;
+using Online_Book_Shopping___Revised.Text_Source;
 using System;
 
 
@@ -22,14 +24,14 @@ namespace Online_Book_Shopping___Revised
             Customer customerObj;
             Seller sellerObj;
             SellerRepositary sellRepositary;
+            LogInManager loginObj = new LogInManager();
 
-
-            Console.WriteLine("Enter Your Option : \n1)Registration \n2)Login \n3)Exit\n");
+            Console.WriteLine(Text.FirstOption);
             short userOption= short.Parse(Console.ReadLine());
             switch (userOption)
             {
                 case 1:
-                    Console.WriteLine("Enter Your Type Of User Registration :\n1)Customer \n2)Seller");
+                    Console.WriteLine(Text.SecondOption);
                     short temp = Int16.Parse(Console.ReadLine());
                     if (temp==1)
                     {
@@ -37,8 +39,7 @@ namespace Online_Book_Shopping___Revised
                         customerRepositary = new CustomerRepositary();
                         customerObj.getCustomerRegistration();
                         customerObj.Role = "Customer";
-                        User user1 = new User();
-                        user1.userLogIn();
+                        loginObj.userLogIn();
                     }
                     else if (temp==2)
                     {
@@ -47,16 +48,11 @@ namespace Online_Book_Shopping___Revised
                         sellerObj = new Seller();
                         sellerObj.getSellerRegistration();
                         sellerObj.Role = "Seller";
-                        User user2 = new User();
-                        user2.userLogIn();
+                        loginObj.userLogIn();
                     }
                     break;
                 case 2:
-                    User user = new User();
-                    if (user.userLogIn())
-                    {
-                       // Console.WriteLine("There is no matching Username and Password in the List...");
-                    }
+                    loginObj.userLogIn();
                     break;
                 case 3:
                     System.Environment.Exit(0);
@@ -64,8 +60,8 @@ namespace Online_Book_Shopping___Revised
                 default:
                     break;
             }
-            Console.WriteLine("If you want to continue Enter: yes");
-            bool istrue = (Console.ReadLine() == "yes");
+            Console.WriteLine(Text.ThirdOption);
+            bool istrue = (Console.ReadLine() == "yes" || Console.ReadLine() == "Yes" || Console.ReadLine() == "YES");
             if (istrue)
             {
                 getUserChoice();
